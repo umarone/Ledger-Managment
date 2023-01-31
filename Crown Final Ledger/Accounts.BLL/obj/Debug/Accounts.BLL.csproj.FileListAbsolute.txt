@@ -132,3 +132,16 @@ D:\Crown Final Ledger\Accounts.BLL\obj\Debug\Accounts.BLL.pdb
 D:\Crown Final Ledger\Accounts.BLL\obj\Debug\Accounts.BLL.csproj.AssemblyReference.cache
 D:\Crown Final Ledger\Accounts.BLL\obj\Debug\Accounts.BLL.csproj.CoreCompileInputs.cache
 D:\Crown Final Ledger\Accounts.BLL\obj\Debug\Accounts.BLL.csproj.CopyComplete
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\bin\Debug\Accounts.BLL.dll
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\bin\Debug\Accounts.BLL.pdb
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\bin\Debug\Accounts.Common.dll
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\bin\Debug\Accounts.DAL.dll
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\bin\Debug\Accounts.EL.dll
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\bin\Debug\Accounts.Common.pdb
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\bin\Debug\Accounts.DAL.pdb
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\bin\Debug\Accounts.EL.pdb
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\obj\Debug\Accounts.BLL.csproj.AssemblyReference.cache
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\obj\Debug\Accounts.BLL.csproj.CoreCompileInputs.cache
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\obj\Debug\Accounts.BLL.csproj.CopyComplete
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\obj\Debug\Accounts.BLL.dll
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\obj\Debug\Accounts.BLL.pdb

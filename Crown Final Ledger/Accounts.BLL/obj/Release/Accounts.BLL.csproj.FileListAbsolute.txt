@@ -132,3 +132,16 @@ D:\Crown Final Ledger\Accounts.BLL\obj\Release\Accounts.BLL.pdb
 D:\Crown Final Ledger\Accounts.BLL\obj\Release\Accounts.BLL.csproj.AssemblyReference.cache
 D:\Crown Final Ledger\Accounts.BLL\obj\Release\Accounts.BLL.csproj.CoreCompileInputs.cache
 D:\Crown Final Ledger\Accounts.BLL\obj\Release\Accounts.BLL.csproj.CopyComplete
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\bin\Release\Accounts.BLL.dll
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\bin\Release\Accounts.BLL.pdb
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\bin\Release\Accounts.Common.dll
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\bin\Release\Accounts.DAL.dll
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\bin\Release\Accounts.EL.dll
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\bin\Release\Accounts.Common.pdb
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\bin\Release\Accounts.DAL.pdb
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\bin\Release\Accounts.EL.pdb
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\obj\Release\Accounts.BLL.csproj.AssemblyReference.cache
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\obj\Release\Accounts.BLL.csproj.CoreCompileInputs.cache
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\obj\Release\Accounts.BLL.csproj.CopyComplete
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\obj\Release\Accounts.BLL.dll
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.BLL\obj\Release\Accounts.BLL.pdb

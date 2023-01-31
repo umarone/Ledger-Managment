@@ -59,3 +59,9 @@ D:\Crown Final Ledger\Accounts.EL\obj\Debug\Accounts.EL.dll
 D:\Crown Final Ledger\Accounts.EL\obj\Debug\Accounts.EL.pdb
 D:\Crown Final Ledger\Accounts.EL\obj\Debug\Accounts.EL.csproj.AssemblyReference.cache
 D:\Crown Final Ledger\Accounts.EL\obj\Debug\Accounts.EL.csproj.CoreCompileInputs.cache
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.EL\bin\Debug\Accounts.EL.dll
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.EL\bin\Debug\Accounts.EL.pdb
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.EL\obj\Debug\Accounts.EL.csproj.AssemblyReference.cache
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.EL\obj\Debug\Accounts.EL.csproj.CoreCompileInputs.cache
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.EL\obj\Debug\Accounts.EL.dll
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.EL\obj\Debug\Accounts.EL.pdb

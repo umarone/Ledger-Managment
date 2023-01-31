@@ -143,6 +143,7 @@
             this.rbnBtnClosingBalancesType = new System.Windows.Forms.RibbonButton();
             this.rbnBtnClosingBalance = new System.Windows.Forms.RibbonButton();
             this.rbnBtnAgingReport = new System.Windows.Forms.RibbonButton();
+            this.rbnBtnFifoAgingReport = new System.Windows.Forms.RibbonButton();
             this.rbnBtnExpenseReports = new System.Windows.Forms.RibbonButton();
             this.rbnBtnDailyExpenseReport = new System.Windows.Forms.RibbonButton();
             this.rbnBtnHeadWiseExpenseReport = new System.Windows.Forms.RibbonButton();
@@ -176,7 +177,6 @@
             this.StripProjectName = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProjectName = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblAbout = new System.Windows.Forms.ToolStripStatusLabel();
-            this.rbnBtnFifoAgingReport = new System.Windows.Forms.RibbonButton();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1157,6 +1157,14 @@
             this.rbnBtnAgingReport.Text = "Aging Report";
             this.rbnBtnAgingReport.Click += new System.EventHandler(this.rbnBtnAgingReport_Click);
             // 
+            // rbnBtnFifoAgingReport
+            // 
+            this.rbnBtnFifoAgingReport.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
+            this.rbnBtnFifoAgingReport.Image = ((System.Drawing.Image)(resources.GetObject("rbnBtnFifoAgingReport.Image")));
+            this.rbnBtnFifoAgingReport.SmallImage = ((System.Drawing.Image)(resources.GetObject("rbnBtnFifoAgingReport.SmallImage")));
+            this.rbnBtnFifoAgingReport.Text = "Fifo Aging Report";
+            this.rbnBtnFifoAgingReport.Click += new System.EventHandler(this.rbnBtnFifoAgingReport_Click);
+            // 
             // rbnBtnExpenseReports
             // 
             this.rbnBtnExpenseReports.DropDownItems.Add(this.rbnBtnDailyExpenseReport);
@@ -1356,6 +1364,7 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.StripUserName,
             this.UserNameStatus,
@@ -1364,10 +1373,10 @@
             this.StripProjectName,
             this.toolStripProjectName,
             this.lblAbout});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 397);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 393);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(948, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(948, 26);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -1375,55 +1384,47 @@
             // 
             this.StripUserName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StripUserName.Name = "StripUserName";
-            this.StripUserName.Size = new System.Drawing.Size(69, 17);
+            this.StripUserName.Size = new System.Drawing.Size(87, 20);
             this.StripUserName.Text = "User Name";
             // 
             // UserNameStatus
             // 
             this.UserNameStatus.Name = "UserNameStatus";
-            this.UserNameStatus.Size = new System.Drawing.Size(0, 17);
+            this.UserNameStatus.Size = new System.Drawing.Size(0, 20);
             // 
             // stripCompanyName
             // 
             this.stripCompanyName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.stripCompanyName.Name = "stripCompanyName";
-            this.stripCompanyName.Size = new System.Drawing.Size(94, 17);
+            this.stripCompanyName.Size = new System.Drawing.Size(121, 20);
             this.stripCompanyName.Text = "Company Name";
             // 
             // toolStripCompanyName
             // 
             this.toolStripCompanyName.Name = "toolStripCompanyName";
-            this.toolStripCompanyName.Size = new System.Drawing.Size(0, 17);
+            this.toolStripCompanyName.Size = new System.Drawing.Size(0, 20);
             // 
             // StripProjectName
             // 
             this.StripProjectName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StripProjectName.Name = "StripProjectName";
-            this.StripProjectName.Size = new System.Drawing.Size(83, 17);
+            this.StripProjectName.Size = new System.Drawing.Size(104, 20);
             this.StripProjectName.Text = "Project Name";
             // 
             // toolStripProjectName
             // 
             this.toolStripProjectName.Name = "toolStripProjectName";
-            this.toolStripProjectName.Size = new System.Drawing.Size(0, 17);
+            this.toolStripProjectName.Size = new System.Drawing.Size(0, 20);
             // 
             // lblAbout
             // 
             this.lblAbout.Name = "lblAbout";
-            this.lblAbout.Size = new System.Drawing.Size(244, 17);
+            this.lblAbout.Size = new System.Drawing.Size(314, 20);
             this.lblAbout.Text = "Developed By Umar Farooq (92-333-6852508)";
-            // 
-            // rbnBtnFifoAgingReport
-            // 
-            this.rbnBtnFifoAgingReport.DropDownArrowDirection = System.Windows.Forms.RibbonArrowDirection.Left;
-            this.rbnBtnFifoAgingReport.Image = ((System.Drawing.Image)(resources.GetObject("rbnBtnFifoAgingReport.Image")));
-            this.rbnBtnFifoAgingReport.SmallImage = ((System.Drawing.Image)(resources.GetObject("rbnBtnFifoAgingReport.SmallImage")));
-            this.rbnBtnFifoAgingReport.Text = "Fifo Aging Report";
-            this.rbnBtnFifoAgingReport.Click += new System.EventHandler(this.rbnBtnFifoAgingReport_Click);
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
