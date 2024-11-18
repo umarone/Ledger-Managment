@@ -1157,3 +1157,5 @@ D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.UI\obj
 D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.UI\obj\x86\Release\Accounts.UI.csproj.CopyComplete
 D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.UI\obj\x86\Release\Accounts.UI.exe
 D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.UI\obj\x86\Release\Accounts.UI.pdb
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.UI\obj\x86\Release\Accounts.UI.frmMainMenu.resources
+D:\GitHub Projects Directory\Ledger-Managment\Crown Final Ledger\Accounts.UI\obj\x86\Release\Accounts.UI.frmMainDashBoard.resources

@@ -94,6 +94,7 @@ namespace Accounts.UI
             IdItem = null;
             txtProdcutNo.Text = string.Empty;
             txtProductCode.Text = string.Empty;
+            txtDiscription.Text = String.Empty;
             //cbxInventoryAccounts.SelectedIndex = 0;
             //cbxCogsAccounts.SelectedIndex = 0;
             //cbxSalesAccounts.SelectedIndex = 0;

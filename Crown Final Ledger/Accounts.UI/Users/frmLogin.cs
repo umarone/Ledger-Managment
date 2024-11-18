@@ -20,6 +20,7 @@ namespace Accounts.UI
         UserRolesEL oelUsers = new UserRolesEL();
         List<UsersEL> oelUserCollection = null;
         frmMain frmmain = null;
+        frmMainDashBoard frmdashboard = null;
         //List<UserRolesEL> oelUserCollection = null;
         #endregion
         #region Forms Methods And Events
@@ -84,9 +85,13 @@ namespace Accounts.UI
             var softManager = new SoftwareTypesBLL();
             var TabsManager = new SoftwareTabsBLL();
             var ModulesManager = new ModulesBLL();
-            if (frmmain == null)
+            //if (frmmain == null)
+            //{
+            //    frmmain = new frmMain();
+            //}
+            if (frmdashboard == null)
             {
-                frmmain = new frmMain();
+                frmdashboard = new frmMainDashBoard();
             }
             if (isValidData())
             {
@@ -135,7 +140,8 @@ namespace Accounts.UI
                         //mtxtUserName.Text = "";
                         mtxtPassword.Text = "";
                         this.Hide();
-                        frmmain.Show();
+                        //frmmain.Show();
+                        frmdashboard.Show();
                         this.Dispose(false);
                         //this.Hide();
                         //MessageBox.Show(XmlConfiguration.ReadXmlTerminalsConfiguration()[0] + " " + XmlConfiguration.ReadXmlTerminalsConfiguration()[1]);

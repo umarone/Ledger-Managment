@@ -48,6 +48,8 @@
             this.colAccountName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDiscription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtTotalOpening = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvOpeningBalance)).BeginInit();
@@ -55,9 +57,10 @@
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblStatuMessage});
-            this.statusStrip1.Location = new System.Drawing.Point(20, 388);
+            this.statusStrip1.Location = new System.Drawing.Point(20, 526);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(912, 22);
             this.statusStrip1.TabIndex = 21;
@@ -66,7 +69,7 @@
             // lblStatuMessage
             // 
             this.lblStatuMessage.Name = "lblStatuMessage";
-            this.lblStatuMessage.Size = new System.Drawing.Size(0, 17);
+            this.lblStatuMessage.Size = new System.Drawing.Size(0, 16);
             // 
             // panel1
             // 
@@ -84,10 +87,10 @@
             // cbxEmployees
             // 
             this.cbxEmployees.FormattingEnabled = true;
-            this.cbxEmployees.ItemHeight = 23;
+            this.cbxEmployees.ItemHeight = 24;
             this.cbxEmployees.Location = new System.Drawing.Point(444, 8);
             this.cbxEmployees.Name = "cbxEmployees";
-            this.cbxEmployees.Size = new System.Drawing.Size(242, 29);
+            this.cbxEmployees.Size = new System.Drawing.Size(242, 30);
             this.cbxEmployees.TabIndex = 13;
             this.cbxEmployees.UseSelectable = true;
             // 
@@ -97,7 +100,7 @@
             this.metroLabel1.BackColor = System.Drawing.Color.Transparent;
             this.metroLabel1.Location = new System.Drawing.Point(355, 12);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(83, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(88, 20);
             this.metroLabel1.TabIndex = 12;
             this.metroLabel1.Text = "Employees : ";
             this.metroLabel1.UseCustomBackColor = true;
@@ -109,7 +112,7 @@
             this.lblBalanceDate.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.lblBalanceDate.Location = new System.Drawing.Point(10, 12);
             this.lblBalanceDate.Name = "lblBalanceDate";
-            this.lblBalanceDate.Size = new System.Drawing.Size(95, 19);
+            this.lblBalanceDate.Size = new System.Drawing.Size(104, 20);
             this.lblBalanceDate.TabIndex = 4;
             this.lblBalanceDate.Text = "Balance Date :";
             this.lblBalanceDate.UseCustomBackColor = true;
@@ -117,14 +120,14 @@
             // dtOpeningBalance
             // 
             this.dtOpeningBalance.Location = new System.Drawing.Point(110, 7);
-            this.dtOpeningBalance.MinimumSize = new System.Drawing.Size(0, 29);
+            this.dtOpeningBalance.MinimumSize = new System.Drawing.Size(0, 30);
             this.dtOpeningBalance.Name = "dtOpeningBalance";
-            this.dtOpeningBalance.Size = new System.Drawing.Size(239, 29);
+            this.dtOpeningBalance.Size = new System.Drawing.Size(239, 30);
             this.dtOpeningBalance.TabIndex = 1;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(758, 345);
+            this.btnDelete.Location = new System.Drawing.Point(756, 489);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(85, 31);
             this.btnDelete.TabIndex = 2;
@@ -134,7 +137,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(843, 345);
+            this.btnClose.Location = new System.Drawing.Point(841, 489);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(85, 31);
             this.btnClose.TabIndex = 3;
@@ -144,7 +147,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(672, 345);
+            this.btnSave.Location = new System.Drawing.Point(670, 489);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(85, 31);
             this.btnSave.TabIndex = 1;
@@ -188,8 +191,9 @@
             this.DgvOpeningBalance.MultiSelect = false;
             this.DgvOpeningBalance.Name = "DgvOpeningBalance";
             this.DgvOpeningBalance.RowHeadersVisible = false;
+            this.DgvOpeningBalance.RowHeadersWidth = 51;
             this.DgvOpeningBalance.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.DgvOpeningBalance.Size = new System.Drawing.Size(928, 223);
+            this.DgvOpeningBalance.Size = new System.Drawing.Size(928, 334);
             this.DgvOpeningBalance.TabIndex = 0;
             this.DgvOpeningBalance.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvOpeningBalance_CellEnter);
             this.DgvOpeningBalance.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.DgvOpeningBalance_EditingControlShowing);
@@ -197,44 +201,71 @@
             // colIdOpeningBalance
             // 
             this.colIdOpeningBalance.HeaderText = "IdOpeningBalance";
+            this.colIdOpeningBalance.MinimumWidth = 6;
             this.colIdOpeningBalance.Name = "colIdOpeningBalance";
             this.colIdOpeningBalance.Visible = false;
+            this.colIdOpeningBalance.Width = 125;
             // 
             // colHeadId
             // 
             this.colHeadId.HeaderText = "HeadId";
+            this.colHeadId.MinimumWidth = 6;
             this.colHeadId.Name = "colHeadId";
             this.colHeadId.Visible = false;
+            this.colHeadId.Width = 125;
             // 
             // colAccount
             // 
             this.colAccount.DataPropertyName = "AccountNo";
             this.colAccount.HeaderText = "Acc. #";
+            this.colAccount.MinimumWidth = 6;
             this.colAccount.Name = "colAccount";
             this.colAccount.Visible = false;
+            this.colAccount.Width = 125;
             // 
             // colAccountName
             // 
             this.colAccountName.HeaderText = "AccountName";
+            this.colAccountName.MinimumWidth = 6;
             this.colAccountName.Name = "colAccountName";
             this.colAccountName.Width = 300;
             // 
             // colDiscription
             // 
             this.colDiscription.HeaderText = "Narration";
+            this.colDiscription.MinimumWidth = 6;
             this.colDiscription.Name = "colDiscription";
             this.colDiscription.Width = 500;
             // 
             // colAmount
             // 
             this.colAmount.HeaderText = "Opening Balance";
+            this.colAmount.MinimumWidth = 6;
             this.colAmount.Name = "colAmount";
             this.colAmount.Width = 120;
+            // 
+            // txtTotalOpening
+            // 
+            this.txtTotalOpening.Location = new System.Drawing.Point(756, 457);
+            this.txtTotalOpening.Name = "txtTotalOpening";
+            this.txtTotalOpening.Size = new System.Drawing.Size(173, 22);
+            this.txtTotalOpening.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(707, 460);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 16);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Total";
             // 
             // frmOpeningBalance
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(952, 430);
+            this.ClientSize = new System.Drawing.Size(952, 568);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtTotalOpening);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnDelete);
@@ -242,6 +273,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.DgvOpeningBalance);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MinimizeBox = false;
             this.Name = "frmOpeningBalance";
             this.Text = "GL Opening Balances";
             this.Load += new System.EventHandler(this.frmOpeningBalance_Load);
@@ -275,6 +307,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colAccountName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDiscription;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAmount;
-
+        private System.Windows.Forms.TextBox txtTotalOpening;
+        private System.Windows.Forms.Label label1;
     }
 }

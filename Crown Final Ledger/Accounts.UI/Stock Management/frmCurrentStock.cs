@@ -19,6 +19,7 @@ namespace Accounts.UI
         #region Variables
         Int64? IdItem;
         frmFindProducts frmFindItems;
+        DataTable dt;
         #endregion
         #region Form Methods And Events
         public frmCurrentStock()
@@ -81,7 +82,7 @@ namespace Accounts.UI
             }
             if (List != null && List.Count > 0)
             {
-
+                dt= DataOperations.ToDataTable(List);
                 for (int i = 0; i < List.Count; i++)
                 {
                     grdCurrentStock.Rows.Add();
@@ -123,6 +124,7 @@ namespace Accounts.UI
                     grdCurrentStock.Rows[i].Cells[18].Value = CommonFunctions.RemoveTrailingZeros(List[i].TotalAmount);
 
                 }
+                txtTotalOpeningStock.Text = List.Sum(x => x.TotalAmount).ToString();
             }
         }
         private void ShowHideColumns1()
@@ -508,6 +510,7 @@ namespace Accounts.UI
         {
             CbxCategories.SelectedIndex = 0;
             grdCurrentStock.Rows.Clear();
+            txtTotalOpeningStock.Text = String.Empty;
         }
         #endregion
         #region Button Events
@@ -636,6 +639,8 @@ namespace Accounts.UI
         void frmFindItems_ExecuteFindPorudctsEvent(object Sender, ItemsEL oelItems)
         {
             var manager = new ItemsBLL();
+            decimal totalValue = 0;
+            var listItem = manager.GetCurrentOpeningStockByItem(oelItems.IdItem.Value);
             //if (manager.VerifyAccount(Operations.IdCompany, "Items", oelItems.AccountNo).Count > 0)
             {
                 //for (int i = 0; i < grdCurrentStock.Rows.Count - 1; i++)
@@ -652,6 +657,19 @@ namespace Accounts.UI
                 grdCurrentStock.CurrentRow.Cells["colIdItem"].Value = oelItems.IdItem;
                 grdCurrentStock.CurrentRow.Cells["colItemName"].Value = oelItems.ItemName;
                 grdCurrentStock.CurrentRow.Cells["colpacking"].Value = oelItems.PackingSize;
+                if (listItem.Count > 0)
+                {
+                    grdCurrentStock.CurrentRow.Cells[0].Value = listItem[0].IdCurrentStock;
+                    grdCurrentStock.CurrentRow.Cells[15].Value = CommonFunctions.RemoveTrailingZeros(listItem[0].Qty);
+                    grdCurrentStock.CurrentRow.Cells[17].Value = CommonFunctions.RemoveTrailingZeros(listItem[0].UnitPrice);
+                    grdCurrentStock.CurrentRow.Cells[18].Value = CommonFunctions.RemoveTrailingZeros(listItem[0].TotalAmount);
+                }
+
+                for (int i = 0; i < grdCurrentStock.Rows.Count; i++)
+                {
+                    totalValue += Validation.GetSafeDecimal(grdCurrentStock.Rows[i].Cells["colQty"].Value) * Validation.GetSafeDecimal(grdCurrentStock.Rows[i].Cells["colUnitPrice"].Value);
+                }
+                txtTotalOpeningStock.Text = totalValue.ToString();  
                 //grdCurrentStock.CurrentRow.Cells["ColBatch"].Value = oelItems.BatchNo;
             }
         }
@@ -672,6 +690,7 @@ namespace Accounts.UI
         private void grdCurrentStock_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             var manager = new ItemsBLL();
+            decimal totalValue = 0;
             if (e.ColumnIndex == 15)
             {
                 grdCurrentStock.Rows[e.RowIndex].Cells["colUnitPrice"].Value = manager.GetItemById(Validation.GetSafeLong(grdCurrentStock.Rows[e.RowIndex].Cells["colIdItem"].Value))[0].CurrentUnitPrice;
@@ -680,6 +699,12 @@ namespace Accounts.UI
             {
                 grdCurrentStock.Rows[e.RowIndex].Cells["colTotalAmount"].Value = Validation.GetSafeDecimal(grdCurrentStock.Rows[e.RowIndex].Cells["colQty"].Value) *
                                                                                  Validation.GetSafeDecimal(grdCurrentStock.Rows[e.RowIndex].Cells["colUnitPrice"].Value);
+
+                for (int i = 0; i < grdCurrentStock.Rows.Count; i++)
+                {
+                    totalValue += Validation.GetSafeDecimal(grdCurrentStock.Rows[i].Cells["colQty"].Value) * Validation.GetSafeDecimal(grdCurrentStock.Rows[i].Cells["colUnitPrice"].Value);
+                }
+                txtTotalOpeningStock.Text = totalValue.ToString();
             }
         }
         private void grdCurrentStock_CellLeave(object sender, DataGridViewCellEventArgs e)
@@ -690,6 +715,7 @@ namespace Accounts.UI
                                                                                  Validation.GetSafeDecimal(grdCurrentStock.Rows[e.RowIndex].Cells["colUnitPrice"].Value);
             }
         }
-        #endregion       
+        #endregion
+
     }
 }

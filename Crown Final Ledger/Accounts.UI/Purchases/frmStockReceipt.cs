@@ -2400,7 +2400,14 @@ namespace Accounts.UI
             }
             else if (list[0].Posted.Value && list[0].IsDeleted == null)
             {
-                btnSave.Enabled = false;
+                if (Operations.IdRole != Validation.GetSafeLong(EnRoles.Administrator))
+                {
+                    btnSave.Enabled = false;
+                }
+                else
+                {
+                    btnSave.Enabled = true;
+                }
                 //btnDelete.Enabled = false;
                 chkPosted.Enabled = false;
                 lblVoucherStatus.Visible = true;

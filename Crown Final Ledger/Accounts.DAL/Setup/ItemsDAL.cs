@@ -893,7 +893,7 @@ namespace Accounts.DAL
             return list;
         }
         public List<ItemsEL> GetCurrentOpeningStockByItem(Int64 IdItem, SqlConnection objConn)
-        {
+            {
             List<ItemsEL> list = new List<ItemsEL>();
             SqlCommand cmdItem = new SqlCommand("[Setup].[Proc_GetCurrentStockByItem]", objConn);
 
@@ -907,11 +907,11 @@ namespace Accounts.DAL
                 oelItems.IdItem = Validation.GetSafeLong(objReader["Item_Id"]);
 
                 oelItems.IdCurrentStock = Validation.GetSafeLong(objReader["CurrentStock_Id"]);
-                oelItems.Seq = Validation.GetSafeInteger(objReader["Seq"]);
-                oelItems.PackingSize = Validation.GetSafeString(objReader["PackingSize"]);
-                oelItems.BatchNo = Validation.GetSafeString(objReader["BatchNo"]);
-                oelItems.Mfg = Validation.GetSafeString(objReader["Mfg"]);
-                oelItems.Expiry = Validation.GetSafeString(objReader["Expiry"]);
+                //oelItems.Seq = Validation.GetSafeInteger(objReader["Seq"]);
+                //oelItems.PackingSize = Validation.GetSafeString(objReader["PackingSize"]);
+                //oelItems.BatchNo = Validation.GetSafeString(objReader["BatchNo"]);
+                //oelItems.Mfg = Validation.GetSafeString(objReader["Mfg"]);
+                //oelItems.Expiry = Validation.GetSafeString(objReader["Expiry"]);
                 oelItems.Qty = Validation.GetSafeInteger(objReader["Units"]);
                 oelItems.UnitPrice = Validation.GetSafeDecimal(objReader["UnitPrice"]);
                 oelItems.TotalAmount = Validation.GetSafeDecimal(objReader["TotalAmount"]);

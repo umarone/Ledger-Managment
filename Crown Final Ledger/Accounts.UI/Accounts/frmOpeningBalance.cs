@@ -104,6 +104,10 @@ namespace Accounts.UI
                 DgvOpeningBalance.Rows[i].Cells["colDiscription"].Value = OpeningBalancelist[i].Discription;
                 DgvOpeningBalance.Rows[i].Cells["colAmount"].Value = OpeningBalancelist[i].Amount.ToString("0.00");
             }
+            if (OpeningBalancelist.Count > 0)
+            {
+                txtTotalOpening.Text = OpeningBalancelist.Sum(x => x.Amount).ToString();
+            }
         }
         private bool ValidateRows()
         {

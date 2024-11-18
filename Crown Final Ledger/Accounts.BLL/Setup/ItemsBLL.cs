@@ -688,7 +688,7 @@ namespace Accounts.BLL
             }
         }
         public List<ItemsEL> GetCurrentOpeningStockByItem(Int64 IdItem)
-        {
+                {
             SqlConnection objConn = new SqlConnection(DBHelper.DataConnection);
             try
             {

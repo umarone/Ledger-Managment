@@ -370,6 +370,18 @@
       <DependentUpon>rptFifoAgingReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Reports\rptAZEnterprisesGojra.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptAZEnterprisesGojra.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptCMMobileSmallInvoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCMMobileSmallInvoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\rptImranMobileSmallInvoice.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -519,6 +531,18 @@
     </Compile>
     <Compile Include="Setup\frmCompanyProjectInfo.Designer.cs">
       <DependentUpon>frmCompanyProjectInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmMainDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmMainDashBoard.Designer.cs">
+      <DependentUpon>frmMainDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setup\frmMainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setup\frmMainMenu.Designer.cs">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Stock Management Reports Forms\frmAllProductsInOutWithAvg.cs">
       <SubType>Form</SubType>
@@ -1168,6 +1192,14 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptFifoAgingReport.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptAZEnterprisesGojra.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptAZEnterprisesGojra.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCMMobileSmallInvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCMMobileSmallInvoice.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptImranMobileSmallInvoice.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptImranMobileSmallInvoice.cs</LastGenOutput>
@@ -1252,6 +1284,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Setup\frmCompanyProjectInfo.resx">
       <DependentUpon>frmCompanyProjectInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmMainDashBoard.resx">
+      <DependentUpon>frmMainDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setup\frmMainMenu.resx">
+      <DependentUpon>frmMainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Stock Management Reports Forms\frmAllProductsInOutWithAvg.resx">
       <DependentUpon>frmAllProductsInOutWithAvg.cs</DependentUpon>

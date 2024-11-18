@@ -277,6 +277,7 @@ namespace Accounts.EL
             get;
             set;
         }
+        public decimal AdvanceAmount { get; set; }
         public decimal TotalDiscount
         {
             get;

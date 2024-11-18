@@ -604,6 +604,7 @@ namespace Accounts.UI
             txtBillAmount.Text = string.Empty;
             txtFreightAmount.Text = string.Empty;
             txtExtraDiscount.Text = string.Empty;
+            txtAdvanceAmount.Text = string.Empty;
             CustomerTransactionId = null;
             VDate.Value = DateTime.Now;
             VDate.Enabled = true;
@@ -938,6 +939,7 @@ namespace Accounts.UI
                         oelVoucher.ExtraDiscount = Validation.GetSafeDecimal(txtExtraDiscount.Text);
                         oelVoucher.BillAmountAfterDiscount = Validation.GetSafeDecimal(txtAmountAfterDiscount.Text);
                         oelVoucher.TotalAmount = Convert.ToDecimal(txtTotalAmount.Text);
+                        oelVoucher.AdvanceAmount = Validation.GetSafeDecimal(txtAdvanceAmount.Text);
 
                         oelVoucher.VAT = 0;//Validation.GetSafeInteger(txtVat.Text);
                         oelVoucher.VATAmount = 0;//Validation.GetSafeDecimal(txtTotalAmount.Text);
@@ -2859,6 +2861,7 @@ namespace Accounts.UI
                 txtAmountAfterDiscount.Text = Validation.GetSafeString(ListSales[0].BillAmountAfterDiscount);
                 txtFreightAmount.Text = Validation.GetSafeString(ListSales[0].TotalFreight);
                 txtTotalAmount.Text = Validation.GetSafeString(ListSales[0].TotalAmount);
+                txtAdvanceAmount.Text = Validation.GetSafeString(ListSales[0].AdvanceAmount);
                 VoucherPreviousBillAmount = ListSales[0].TotalAmount;
                 if (ListSales[0].IsNetTransaction.Value)
                     rdCash.Checked = true;
@@ -2973,6 +2976,7 @@ namespace Accounts.UI
                 txtFreightAmount.Text = Validation.GetSafeString(ListSales[0].TotalFreight);
                 txtTotalAmount.Text = Validation.GetSafeString(ListSales[0].TotalAmount);
                 VoucherPreviousBillAmount = ListSales[0].TotalAmount;
+                txtAdvanceAmount.Text = Validation.GetSafeString(ListSales[0].AdvanceAmount);
                 //IsWhatTransactionType = ListSales[0].IsNetTransaction;
                 if (ListSales[0].IsNetTransaction.Value)
                     rdCash.Checked = true;
@@ -3071,7 +3075,15 @@ namespace Accounts.UI
             }
             else if (list[0].Posted.Value && list[0].IsDeleted == null)
             {
-                btnSave.Enabled = false;
+                if (Operations.IdRole != Validation.GetSafeLong(EnRoles.Administrator))
+                {
+                    btnSave.Enabled = false;
+                }
+                else
+                {
+                    btnSave.Enabled = true;
+                }
+                
                 //btnDelete.Enabled = false;
                 chkPosted.Enabled = false;
                 lblVoucherStatus.Visible = true;

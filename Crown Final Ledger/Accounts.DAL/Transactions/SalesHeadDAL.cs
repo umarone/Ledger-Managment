@@ -98,6 +98,7 @@ namespace Accounts.DAL
                     cmdSales.Parameters.Add(new SqlParameter("@TaxPercentage", DbType.Decimal)).Value = oelVoucher.TaxPercentage;
                     cmdSales.Parameters.Add(new SqlParameter("@TotalTaxAmount", DbType.Decimal)).Value = oelVoucher.TotalTaxAmount;
                     cmdSales.Parameters.Add(new SqlParameter("@TotalAmountAfterTax", DbType.Decimal)).Value = oelVoucher.TotalAmountAfterTax;
+                    cmdSales.Parameters.Add(new SqlParameter("@AdvanceAmount", DbType.Decimal)).Value = oelVoucher.AdvanceAmount;
                     cmdSales.Parameters.Add(new SqlParameter("@CreditDays", DbType.Int32)).Value = oelVoucher.RemainingDays;
                     cmdSales.Parameters.Add(new SqlParameter("@IsRecieved", DbType.Decimal)).Value = oelVoucher.IsRecieved;
                     cmdSales.Parameters.Add(new SqlParameter("@IsNetTransaction", DbType.Boolean)).Value = oelVoucher.IsNetTransaction;
@@ -199,6 +200,7 @@ namespace Accounts.DAL
                     cmdSales.Parameters.Add(new SqlParameter("@TaxPercentage", DbType.Decimal)).Value = oelVoucher.TaxPercentage;
                     cmdSales.Parameters.Add(new SqlParameter("@TotalTaxAmount", DbType.Decimal)).Value = oelVoucher.TotalTaxAmount;
                     cmdSales.Parameters.Add(new SqlParameter("@TotalAmountAfterTax", DbType.Decimal)).Value = oelVoucher.TotalAmountAfterTax;
+                    cmdSales.Parameters.Add(new SqlParameter("@AdvanceAmount", DbType.Decimal)).Value = oelVoucher.AdvanceAmount;
                     cmdSales.Parameters.Add(new SqlParameter("@CreditDays", DbType.Int32)).Value = oelVoucher.RemainingDays;
                     cmdSales.Parameters.Add(new SqlParameter("@IsRecieved", DbType.Decimal)).Value = oelVoucher.Transactiondays;
                     cmdSales.Parameters.Add(new SqlParameter("@IsNetTransaction", DbType.Boolean)).Value = oelVoucher.IsNetTransaction;
@@ -372,6 +374,7 @@ namespace Accounts.DAL
                     oelVoucher.TaxPercentage = Validation.GetSafeDecimal(objReader["TaxPercentage"]);
                     oelVoucher.TotalTaxAmount = Validation.GetSafeDecimal(objReader["TotalTaxAmount"]);
                     oelVoucher.TotalAmountAfterTax = Validation.GetSafeDecimal(objReader["TotalAmountAfterTax"]);
+                    oelVoucher.AdvanceAmount = Validation.GetSafeDecimal(objReader["AdvanceAmount"]);
                     oelVoucher.Transactiondays = Validation.GetSafeLong(objReader["CreditDays"]);
                     oelVoucher.IsRecieved = Validation.GetSafeBooleanNullable(objReader["IsRecieved"]);
 
@@ -661,6 +664,7 @@ namespace Accounts.DAL
                     oelVoucher.TaxPercentage = Validation.GetSafeDecimal(objReader["TaxPercentage"]);
                     oelVoucher.TotalTaxAmount = Validation.GetSafeDecimal(objReader["TotalTaxAmount"]);
                     oelVoucher.TotalAmountAfterTax = Validation.GetSafeDecimal(objReader["TotalAmountAfterTax"]);
+                    oelVoucher.AdvanceAmount = Validation.GetSafeDecimal(objReader["AdvanceAmount"]);
                     oelVoucher.Transactiondays = Validation.GetSafeLong(objReader["CreditDays"]);
                     oelVoucher.IsRecieved = Validation.GetSafeBooleanNullable(objReader["IsRecieved"]);
 
